@@ -6,7 +6,7 @@
   <link href="https://zhitenghao.github.io/atom.xml" rel="self"/>
   
   <link href="https://zhitenghao.github.io/"/>
-  <updated>1985-10-26T08:15:00.000Z</updated>
+  <updated>2022-03-07T11:35:30.017Z</updated>
   <id>https://zhitenghao.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://zhitenghao.github.io/2022/03070.html"/>
+    <id>https://zhitenghao.github.io/2022/03070.html</id>
+    <published>2022-03-07T11:31:43.714Z</published>
+    <updated>2022-03-07T11:35:30.017Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我的第一篇博客&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="https://zhitenghao.github.io/2022/030716107.html"/>
     <id>https://zhitenghao.github.io/2022/030716107.html</id>
     <published>2022-03-07T02:27:57.199Z</published>
-    <updated>1985-10-26T08:15:00.000Z</updated>
+    <updated>2022-03-07T11:06:25.577Z</updated>
     
     
       
