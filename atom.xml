@@ -6,7 +6,7 @@
   <link href="https://zhitenghao.github.io/atom.xml" rel="self"/>
   
   <link href="https://zhitenghao.github.io/"/>
-  <updated>2022-05-05T13:10:42.452Z</updated>
+  <updated>2022-05-05T13:42:06.793Z</updated>
   <id>https://zhitenghao.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://zhitenghao.github.io/2022/05051.html"/>
-    <id>https://zhitenghao.github.io/2022/05051.html</id>
-    <published>2022-05-05T13:05:21.622Z</published>
-    <updated>2022-05-05T13:10:42.452Z</updated>
+    <title>C++初级</title>
+    <link href="https://zhitenghao.github.io/2022/050531891.html"/>
+    <id>https://zhitenghao.github.io/2022/050531891.html</id>
+    <published>2022-05-05T12:34:56.000Z</published>
+    <updated>2022-05-05T13:42:06.793Z</updated>
     
     
       
@@ -35,41 +35,12 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>My new</title>
-    <link href="https://zhitenghao.github.io/2022/050531891.html"/>
-    <id>https://zhitenghao.github.io/2022/050531891.html</id>
-    <published>2022-05-05T12:34:56.000Z</published>
-    <updated>2022-05-05T12:37:41.693Z</updated>
+    <category term="编程语言" scheme="https://zhitenghao.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
+    <category term="后端" scheme="https://zhitenghao.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://zhitenghao.github.io/2022/03071.html"/>
-    <id>https://zhitenghao.github.io/2022/03071.html</id>
-    <published>2022-03-07T11:31:43.714Z</published>
-    <updated>2022-05-05T12:24:12.129Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;我的第一篇博客&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
+    <category term="编程语言" scheme="https://zhitenghao.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
