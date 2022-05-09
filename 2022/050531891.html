@@ -432,12 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                                <span class="chip bg-color">后端</span>
-                            </a>
-                        
-                            <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">
-                                <span class="chip bg-color">编程语言</span>
+                            <a href="/tags/C-%E5%88%9D%E7%BA%A7/">
+                                <span class="chip bg-color">C++初级</span>
                             </a>
                         
                     </div>
@@ -448,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="post-category">
-                                编程语言
+                            <a href="/categories/C/" class="post-category">
+                                C++
                             </a>
                         
                     </div>
@@ -590,7 +586,7 @@
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_30815237/article/details/87452311">(11条消息) VS如何在一个项目中添加多个包含main函数的源文件并分别调试运行_菜鸟知识搬运工的博客-CSDN博客_vs一个项目添加多个源文件</a></li>
 </ol>
 <h2 id="第二章-C-简单程序设计"><a href="#第二章-C-简单程序设计" class="headerlink" title="第二章 C++简单程序设计"></a>第二章 C++简单程序设计</h2><h3 id="2-1-程序实例："><a href="#2-1-程序实例：" class="headerlink" title="2.1 程序实例："></a>2.1 程序实例：</h3><ol>
-<li><p>#include <iostream>  给出了预定义好的输入输出的功能的声明</p>
+<li><p>#include <iostream>  给出了预定义好的输入输出的功能的声明</iostream></p>
 </li>
 <li><p>#include 编译预处理命令，在编译器开始语法检查，开始编译程序之前，首先要按照include指令到指定的目录下，去找到iostream文件，把该文件的全部命令复制到include指定的位置，iostream类的对象cin&gt;&gt;操作，可以从标准输入设备（通常是键盘）读入数据</p>
 </li>
@@ -641,7 +637,7 @@
 <li>有字符串常量</li>
 <li>基本类型中没有字符串变量</li>
 <li>C语言风格的字符串：char 变量名[] = “hello world”；// 采用了字符数组存放字符串</li>
-<li>C++风格的字符串：string 变量名 = “hello world”;  // 在C++的标准库里有String类，但要包含头文件：#include<string></li>
+<li>C++风格的字符串：string 变量名 = “hello world”;  // 在C++的标准库里有String类，但要包含头文件：#include<string></string></li>
 </ol>
 <h3 id="2-3-C-的基本运算"><a href="#2-3-C-的基本运算" class="headerlink" title="2.3 C++的基本运算"></a>2.3 C++的基本运算</h3><h4 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h4><ol>
 <li><p>两个整数相除，结果依然是整数，小数部分会被去除。例如：10/20 的结果是0，10/3 的结果是3。除数也就是分母不得为0，这是非法的操作。</p>
@@ -1005,7 +1001,7 @@ void swap(int * num1, int * num2) &#123;
 <h3 id="6-2-结构体定义和使用"><a href="#6-2-结构体定义和使用" class="headerlink" title="6.2 结构体定义和使用"></a>6.2 结构体定义和使用</h3><ol>
 <li><p>语法：</p>
 <p>struct  Student { // 结构体名首字母大写</p>
-<p>​        String  name； // 可以理解为属性，用C++的字符串要包含头文件：#include<string></p>
+<p>​        String  name； // 可以理解为属性，用C++的字符串要包含头文件：#include<string></string></p>
 <p>​        int   age；</p>
 <p>​        int  score；</p>
 <p>} student03；// 在定义结构体的同时创建结构体变量student03，然后可以通过 . 运算符来初始化，这种方式使用较少</p>
@@ -2512,7 +2508,7 @@ int main() &#123;
 <li>父类中的公有成员、保护成员在子类中称为私有成员，私有成员在类外无法访问</li>
 <li>父类中的私有成员，在子类中不可以访问</li>
 </ol>
-<p><img src="C:\Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220413170510476.png" alt="image-20220413170510476"></p>
+<p><img src="/2022/050531891.htm/Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220413170510476.png" alt="image-20220413170510476"></p>
 <h4 id="4-6-3-继承中的对象模型"><a href="#4-6-3-继承中的对象模型" class="headerlink" title="4.6.3 继承中的对象模型"></a>4.6.3 继承中的对象模型</h4><ol>
 <li>父类中的所有非静态成员属性都会被子类继承</li>
 <li>父类中私有成员属性被编译器隐藏，因此无法在子类访问，但是确实被继承了</li>
@@ -2732,7 +2728,7 @@ public:
 </li>
 </ul>
 <p><strong>动态原理：</strong></p>
-<p><img src="C:\Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220415094100054.png" alt="image-20220415094100054"></p>
+<p><img src="/2022/050531891.htm/Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220415094100054.png" alt="image-20220415094100054"></p>
 <p><strong>多态的优点：</strong></p>
 <ul>
 <li><p>代码组织和结构清晰</p>
@@ -2937,7 +2933,7 @@ int main() &#123;
 </li>
 <li><p>通过文件可以将数据持久化</p>
 </li>
-<li><p>C++对文件操作需要包含头文件<fstream></p>
+<li><p>C++对文件操作需要包含头文件<fstream></fstream></p>
 </li>
 <li><p>文件分为：文本文件和二进制文件</p>
 </li>
@@ -2953,7 +2949,7 @@ int main() &#123;
 <li>fstream：读写操作，在进行读写操作时，读操作和写操作分开写，分别打开和关闭fstream流</li>
 </ul>
 <h3 id="5-1-文本文件"><a href="#5-1-文本文件" class="headerlink" title="5.1 文本文件"></a>5.1 文本文件</h3><h4 id="5-1-1-写文件"><a href="#5-1-1-写文件" class="headerlink" title="5.1.1 写文件"></a>5.1.1 写文件</h4><ol>
-<li>包含头文件：#include<fstream></li>
+<li>包含头文件：#include<fstream></fstream></li>
 <li>创建对象流：ofstream ofs；</li>
 <li>打开文件：ofs.open(“文件的路径”, 打开方式);</li>
 <li>写数据：ofs&lt;&lt;“写入的数据”&lt;&lt;endl;</li>
@@ -2967,7 +2963,7 @@ int main() &#123;
 <li>ios::app 追加方式写文件</li>
 <li>ios::trunc 如果文件存在先删除，再创建</li>
 <li>ios::binary 二进制方式</li>
-<li><img src="C:\Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220502181325694.png" alt="image-20220502181325694"></li>
+<li><img src="/2022/050531891.htm/Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220502181325694.png" alt="image-20220502181325694"></li>
 </ul>
 <p><strong>注意：</strong></p>
 <ol>
@@ -2988,7 +2984,7 @@ int main() &#123;
 </li>
 </ol>
 <h4 id="5-1-2-读文件"><a href="#5-1-2-读文件" class="headerlink" title="5.1.2 读文件"></a>5.1.2 读文件</h4><ol>
-<li><p>包含头文件#include<fstream></p>
+<li><p>包含头文件#include<fstream></fstream></p>
 </li>
 <li><p>创建流对象ifstream ifs;</p>
 </li>
@@ -4213,7 +4209,7 @@ int main() &#123;
 </ol>
 <h4 id="2-5-1-vector存放内置数据类型"><a href="#2-5-1-vector存放内置数据类型" class="headerlink" title="2.5.1 vector存放内置数据类型"></a>2.5.1 vector存放内置数据类型</h4><p>容器：vector</p>
 <p>算法：for_each</p>
-<p>迭代器：vector<int>::iterator</p>
+<p>迭代器：vector<int>::iterator</int></p>
 <pre><code>#include&lt;iostream&gt;
 using namespace std;
 #include&lt;vector&gt; // 要包含头文件
@@ -4518,7 +4514,7 @@ string&amp; erase(int pos, int n = npos); // 从pos起，删除n个字符
 <li><p>push_back()； 尾加数据</p>
 </li>
 <li><p>vector是一组连续的内存空间</p>
-<p><img src="C:\Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220426102326366.png" alt="image-20220426102326366"></p>
+<p><img src="/2022/050531891.htm/Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220426102326366.png" alt="image-20220426102326366"></p>
 </li>
 </ol>
 <h4 id="3-2-2-构造函数"><a href="#3-2-2-构造函数" class="headerlink" title="3.2.2 构造函数"></a>3.2.2 构造函数</h4><ol>
@@ -4623,8 +4619,8 @@ int main() &#123;
 </ul>
 </li>
 </ol>
-<p><img src="C:\Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220426101809778.png" alt="image-20220426101809778"></p>
-<p><img src="C:\Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220426102108888.png" alt="image-20220426102108888"></p>
+<p><img src="/2022/050531891.htm/Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220426101809778.png" alt="image-20220426101809778"></p>
+<p><img src="/2022/050531891.htm/Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220426102108888.png" alt="image-20220426102108888"></p>
 <h4 id="3-3-2-deque构造函数"><a href="#3-3-2-deque构造函数" class="headerlink" title="3.3.2 deque构造函数"></a>3.3.2 deque构造函数</h4><pre><code>deque&lt;T&gt; deqT; // 默认构造
 deque(begin, end); // 构造函数将[begin,end)区间中的元素拷贝到deque容器
 deque(n, elem); // 构造函数将n个elem拷贝到deque容器
@@ -4663,7 +4659,7 @@ front(); // 返回容器中的第一个元素
 back(); // 返回容器中的最后一个元素
 </code></pre>
 <h4 id="3-3-7-排序"><a href="#3-3-7-排序" class="headerlink" title="3.3.7 排序"></a>3.3.7 排序</h4><p>对容器中的数据进行排序</p>
-<p>所有标准算法都要包含头文件：#include<algorithm></p>
+<p>所有标准算法都要包含头文件：#include<algorithm></algorithm></p>
 <p>对于支持随机访问的迭代器的容器，都可以利用sort算法直接对其进行排序</p>
 <p>vector 和 deque 都可以利用 sort 进行排序</p>
 <pre><code>sort(iterator begin, iterator end); // 对begin 和 end 区间内元素进行排序 
@@ -4672,7 +4668,7 @@ back(); // 返回容器中的最后一个元素
 <li><p>概念：stack是一种先进先出的数据结构，它只有一共出口</p>
 </li>
 <li><p>栈中只有栈顶元素才可以被外界访问，因此栈不可以有遍历行为</p>
-<p><img src="C:\Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220427091716514.png" alt="image-20220427091716514"></p>
+<p><img src="/2022/050531891.htm/Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220427091716514.png" alt="image-20220427091716514"></p>
 </li>
 <li><p>栈可以判断是否为空，empty()</p>
 </li>
@@ -4739,7 +4735,7 @@ int main() &#123;
 <li>出队 pop();</li>
 <li>入队push();</li>
 <li>是否为空empty();</li>
-<li><img src="C:\Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220427094321125.png" alt="image-20220427094321125"></li>
+<li><img src="/2022/050531891.htm/Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220427094321125.png" alt="image-20220427094321125"></li>
 </ol>
 <h4 id="3-5-2-常用接口"><a href="#3-5-2-常用接口" class="headerlink" title="3.5.2 常用接口"></a>3.5.2 常用接口</h4><pre><code>// 构造函数
 queue&lt;T&gt; que; // queue采用模板类实现，queue对象的默认构造函数
@@ -4776,7 +4772,7 @@ size(); // 返回队列的大小
 <li><p>List有一个重要的性质：插入和删除操作都不会造成原有list迭代器的失效，这在vector中是不成立的</p>
 </li>
 <li><p>List和vector是最常被使用的容器，各有优缺点</p>
-<p><img src="C:\Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220427102533878.png" alt="image-20220427102533878"></p>
+<p><img src="/2022/050531891.htm/Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220427102533878.png" alt="image-20220427102533878"></p>
 </li>
 </ol>
 <h4 id="3-6-2-构造函数"><a href="#3-6-2-构造函数" class="headerlink" title="3.6.2 构造函数"></a>3.6.2 构造函数</h4><pre><code>list&lt;T&gt; lst; // list采用模板类实现，对象的默认构造方式
@@ -4794,7 +4790,7 @@ empty(); // 判断容器是否为空
 resize(int n,  elem); // 重新指定list中元素的个数，并用elem填充多余的空间
 resize(int n) // 重新指定list中的元素个数
 </code></pre>
-<h4 id="3-6-5-list-插入和删除"><a href="#3-6-5-list-插入和删除" class="headerlink" title="3.6.5 list 插入和删除"></a>3.6.5 list 插入和删除</h4><p><img src="C:\Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220427105040831.png" alt="image-20220427105040831"></p>
+<h4 id="3-6-5-list-插入和删除"><a href="#3-6-5-list-插入和删除" class="headerlink" title="3.6.5 list 插入和删除"></a>3.6.5 list 插入和删除</h4><p><img src="/2022/050531891.htm/Users\haozh\AppData\Roaming\Typora\typora-user-images\image-20220427105040831.png" alt="image-20220427105040831"></p>
 <h4 id="3-6-6-list数据存取"><a href="#3-6-6-list数据存取" class="headerlink" title="3.6.6 list数据存取"></a>3.6.6 list数据存取</h4><p>链表不能用中括号[]、at();方式跳跃式的访问数据，也就是不支持随机访问</p>
 <p>只能用迭代器顺序去访问数据</p>
 <p>只能自增自减、不能用迭代器 + 2；的类似操作</p>
@@ -5373,7 +5369,7 @@ int main() &#123;
 <li>STL内建了一些函数对象</li>
 <li>分类：算术仿函数、关系仿函数、逻辑仿函数</li>
 <li>这些仿函数所产生的对象，用法和一般函数完全相同</li>
-<li>使用内建函数对象，需要引入头文件 #include<functional></li>
+<li>使用内建函数对象，需要引入头文件 #include<functional></functional></li>
 </ol>
 <h4 id="4-3-2-算术仿函数"><a href="#4-3-2-算术仿函数" class="headerlink" title="4.3.2 算术仿函数"></a>4.3.2 算术仿函数</h4><ol>
 <li><p>实现四则运算</p>
@@ -5494,15 +5490,15 @@ int main() &#123;
 &#125;
 </code></pre>
 <h2 id="第五章-常用算法"><a href="#第五章-常用算法" class="headerlink" title="第五章 常用算法"></a>第五章 常用算法</h2><ol>
-<li>算法主要是由头文件<algorithm>, <functional>, <numeric> 组成</li>
-<li><algorithm> 是所有STL头文件中的最大的一个，范围设计到比较，交换，查找，遍历操作，复制，修改等等</li>
-<li><numeric> 体积很小，只包括几个在序列上面进行简单数学运算的模板函数</li>
-<li><functional> 定义了一些模板类，用以声明函数对象</li>
+<li>算法主要是由头文件<algorithm>, <functional>, <numeric> 组成</numeric></functional></algorithm></li>
+<li><algorithm> 是所有STL头文件中的最大的一个，范围设计到比较，交换，查找，遍历操作，复制，修改等等</algorithm></li>
+<li><numeric> 体积很小，只包括几个在序列上面进行简单数学运算的模板函数</numeric></li>
+<li><functional> 定义了一些模板类，用以声明函数对象</functional></li>
 </ol>
 <h3 id="5-1-常用遍历算法"><a href="#5-1-常用遍历算法" class="headerlink" title="5.1 常用遍历算法"></a>5.1 常用遍历算法</h3><h4 id="5-1-1-for-each"><a href="#5-1-1-for-each" class="headerlink" title="5.1.1 for_each"></a>5.1.1 for_each</h4><ol>
 <li><p>遍历容器</p>
 </li>
-<li><p>需要包含#include<algorithm></p>
+<li><p>需要包含#include<algorithm></algorithm></p>
 </li>
 <li><pre><code>for_each(iterator begin, iterator end, _func);
 // begin 开始迭代器
@@ -5858,11 +5854,11 @@ int main() &#123;
 sort(iterator begin, iterator end, _Pred);
 // _Pred 谓词，可以改变排序规则
 </code></pre>
-<h4 id="5-3-2-random-shuffle"><a href="#5-3-2-random-shuffle" class="headerlink" title="5.3.2 random_shuffle"></a>5.3.2 random_shuffle</h4><p>#include<algorithm></p>
+<h4 id="5-3-2-random-shuffle"><a href="#5-3-2-random-shuffle" class="headerlink" title="5.3.2 random_shuffle"></a>5.3.2 random_shuffle</h4><p>#include<algorithm></algorithm></p>
 <pre><code>// 洗牌算法，将指定范围内的元素顺序打乱
 random_shuffle(iterator begin, iterator end);
 </code></pre>
-<h4 id="5-3-3-merge"><a href="#5-3-3-merge" class="headerlink" title="5.3.3 merge"></a>5.3.3 merge</h4><p>#include<algorithm></p>
+<h4 id="5-3-3-merge"><a href="#5-3-3-merge" class="headerlink" title="5.3.3 merge"></a>5.3.3 merge</h4><p>#include<algorithm></algorithm></p>
 <p>两个容器中的元素合并，并存储到另一个容器（需要提前开辟空间）中</p>
 <pre><code>merge(iterator begin1, iterator end1, iterator begin2, iterator end2, iterator dest);
 // 注意，两个容器必须是有序的
@@ -5872,18 +5868,18 @@ random_shuffle(iterator begin, iterator end);
 <h4 id="5-3-4-reverse"><a href="#5-3-4-reverse" class="headerlink" title="5.3.4 reverse"></a>5.3.4 reverse</h4><pre><code>// 将容器内的元素进行反转
 reverse(iterator begin, iterator end);
 </code></pre>
-<h3 id="5-4-常用拷贝和替换算法"><a href="#5-4-常用拷贝和替换算法" class="headerlink" title="5.4 常用拷贝和替换算法"></a>5.4 常用拷贝和替换算法</h3><h4 id="5-4-1-copy"><a href="#5-4-1-copy" class="headerlink" title="5.4.1 copy"></a>5.4.1 copy</h4><p>#include<algorithm></p>
+<h3 id="5-4-常用拷贝和替换算法"><a href="#5-4-常用拷贝和替换算法" class="headerlink" title="5.4 常用拷贝和替换算法"></a>5.4 常用拷贝和替换算法</h3><h4 id="5-4-1-copy"><a href="#5-4-1-copy" class="headerlink" title="5.4.1 copy"></a>5.4.1 copy</h4><p>#include<algorithm></algorithm></p>
 <p>其实，在vector容器中直接用 = 赋值即可</p>
 <pre><code>// 容器内指定范围的元素拷贝到另一个容器(需要提前开辟空间，否则无法加入数据)中
 copy(iterator begin, iterator end, iterator dest);
 // 将区间内的元素拷贝到另一个容器的dest迭代器
 </code></pre>
 <h4 id="5-4-2-replace"><a href="#5-4-2-replace" class="headerlink" title="5.4.2 replace"></a>5.4.2 replace</h4><p>将容器内的指定范围的旧元素替换为新元素</p>
-<p>#include<algorithm></p>
+<p>#include<algorithm></algorithm></p>
 <pre><code>replace(iterator begin, iterator end, elem1, elem2); // 将区间的元素的elem1全部替换为elem2 
 </code></pre>
 <h4 id="5-4-3-replace-if"><a href="#5-4-3-replace-if" class="headerlink" title="5.4.3 replace_if"></a>5.4.3 replace_if</h4><p>将区间内满足条件的元素替换为新元素</p>
-<p>#include<algorithm></p>
+<p>#include<algorithm></algorithm></p>
 <pre><code>replace_if(iterator begin, iterator end, _Pred, newElem);
 // _Pred 谓词
 // newElem 新的元素
@@ -5891,11 +5887,11 @@ copy(iterator begin, iterator end, iterator dest);
 <h4 id="5-4-4-swap"><a href="#5-4-4-swap" class="headerlink" title="5.4.4 swap"></a>5.4.4 swap</h4><pre><code>// 交换两个容器中的元素
 swap(container c1, container c2); // 两个容器中类型要相同
 </code></pre>
-<h3 id="5-5-常用算术生成算法"><a href="#5-5-常用算术生成算法" class="headerlink" title="5.5 常用算术生成算法"></a>5.5 常用算术生成算法</h3><h4 id="5-5-1-accumulate"><a href="#5-5-1-accumulate" class="headerlink" title="5.5.1 accumulate"></a>5.5.1 accumulate</h4><p>#include<numeric></p>
+<h3 id="5-5-常用算术生成算法"><a href="#5-5-常用算术生成算法" class="headerlink" title="5.5 常用算术生成算法"></a>5.5 常用算术生成算法</h3><h4 id="5-5-1-accumulate"><a href="#5-5-1-accumulate" class="headerlink" title="5.5.1 accumulate"></a>5.5.1 accumulate</h4><p>#include<numeric></numeric></p>
 <pre><code>accumulate(iterator begin, iterator end, value); // 将容器中的元素累加并返回总和
 // value 是起始的累加值
 </code></pre>
-<h4 id="5-5-2-fill"><a href="#5-5-2-fill" class="headerlink" title="5.5.2 fill"></a>5.5.2 fill</h4><p>#include<numeric></p>
+<h4 id="5-5-2-fill"><a href="#5-5-2-fill" class="headerlink" title="5.5.2 fill"></a>5.5.2 fill</h4><p>#include<numeric></numeric></p>
 <p>向容器区间填充指定的数据</p>
 <pre><code>fill(iterator begin, iterator end, value); // 将value填充到区间
 </code></pre>
@@ -5919,11 +5915,11 @@ swap(container c1, container c2); // 两个容器中类型要相同
 // 返回的是差集的最后一个元素的下一个位置的迭代器
 </code></pre>
 <h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><h4 id="生成随机数："><a href="#生成随机数：" class="headerlink" title="生成随机数："></a><strong>生成随机数：</strong></h4><p>​    // 添加随机数种子：利用系统的当前时间生成随机数，防止每次随机数都一样</p>
-<p>​    srand((unsigned int)time(NULL));  // 要包含 #include<ctime><br>​    // 生成一个随机数<br>​    int randomNum = 1 + rand() % 100;<br>​    cout &lt;&lt; randomNum &lt;&lt; endl;</p>
+<p>​    srand((unsigned int)time(NULL));  // 要包含 #include<ctime><br>​    // 生成一个随机数<br>​    int randomNum = 1 + rand() % 100;<br>​    cout &lt;&lt; randomNum &lt;&lt; endl;</ctime></p>
 <h4 id="常用计算方法："><a href="#常用计算方法：" class="headerlink" title="常用计算方法："></a><strong>常用计算方法：</strong></h4><p>​    a = num % 10; // 获取个位<br>​    b = (num / 10) % 10; // 获取十位<br>​    c = num / 100; // 获取百位</p>
 <h4 id="列数小于等于行数"><a href="#列数小于等于行数" class="headerlink" title="列数小于等于行数"></a><strong>列数小于等于行数</strong></h4><p>sizeof(数据):统计数据所占的字节数</p>
 <p>system(“pause”); // 请按任意键继续</p>
-<h4 id="include"><a href="#include" class="headerlink" title="#include"></a><strong>#include<algorithm></strong></h4><p>find_if(迭代器开始，迭代器结束，匿名对象())； // 匿名对象()，使用了重载的()运算符</p>
+<h4 id="include"><a href="#include" class="headerlink" title="#include"></a><strong>#include<algorithm></algorithm></strong></h4><p>find_if(迭代器开始，迭代器结束，匿名对象())； // 匿名对象()，使用了重载的()运算符</p>
 <h4 id="min-elem-elem-；求最小值"><a href="#min-elem-elem-；求最小值" class="headerlink" title="min(elem, elem)；求最小值"></a>min(elem, elem)；求最小值</h4><h4 id="max-elem-elem-；求最大值"><a href="#max-elem-elem-；求最大值" class="headerlink" title="max(elem, elem)；求最大值"></a>max(elem, elem)；求最大值</h4><h1 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h1><p>头文件中写声明；</p>
 <p>源文件中写实现；</p>
 <p>#progma once：防止头文件重复包含</p>
@@ -8146,12 +8142,8 @@ public:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                                    <span class="chip bg-color">后端</span>
-                                </a>
-                            
-                                <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">
-                                    <span class="chip bg-color">编程语言</span>
+                                <a href="/tags/C-%E5%88%9D%E7%BA%A7/">
+                                    <span class="chip bg-color">C++初级</span>
                                 </a>
                             
                         </div>
@@ -8321,18 +8313,17 @@ public:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/050531891.html">
+                <a href="/2022/050931850.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C++初级">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="STL标准库和泛型编程">
                         
-                        <span class="card-title">C++初级</span>
+                        <span class="card-title">STL标准库和泛型编程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -8342,31 +8333,30 @@ public:
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-09
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    编程语言
+                            <a href="/categories/C/" class="post-category">
+                                    C++
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                        <span class="chip bg-color">后端</span>
+                    <a href="/tags/C-%E8%BF%9B%E9%98%B6/">
+                        <span class="chip bg-color">C++进阶</span>
                     </a>
                     
-                    <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">编程语言</span>
+                    <a href="/tags/STL%E6%A0%87%E5%87%86%E5%BA%93%E5%92%8C%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">STL标准库和泛型编程</span>
                     </a>
                     
                 </div>
@@ -8606,7 +8596,7 @@ public:
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.9k</span>&nbsp;字
+                class="white-color">5.1k</span>&nbsp;字
             
             
             
