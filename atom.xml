@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>perfect</title>
+  <title>Perfect&#39;s Blog</title>
   
   <subtitle>hi</subtitle>
   <link href="https://zhitenghao.github.io/atom.xml" rel="self"/>
   
   <link href="https://zhitenghao.github.io/"/>
-  <updated>2022-05-09T14:49:43.845Z</updated>
+  <updated>2022-05-26T12:57:52.602Z</updated>
   <id>https://zhitenghao.github.io/</id>
   
   <author>
@@ -17,19 +17,62 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>我的第一个servlet程序</title>
+    <link href="https://zhitenghao.github.io/2022/05164856.html"/>
+    <id>https://zhitenghao.github.io/2022/05164856.html</id>
+    <published>2022-05-16T02:39:59.000Z</published>
+    <updated>2022-05-26T12:57:52.602Z</updated>
+    
+    
+    
+    
+    <category term="Servlet" scheme="https://zhitenghao.github.io/categories/Servlet/"/>
+    
+    
+    <category term="Servlet" scheme="https://zhitenghao.github.io/tags/Servlet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端基础</title>
+    <link href="https://zhitenghao.github.io/2022/051348395.html"/>
+    <id>https://zhitenghao.github.io/2022/051348395.html</id>
+    <published>2022-05-13T00:33:31.000Z</published>
+    <updated>2022-05-26T12:57:52.602Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;第一章-html-amp-CSS-amp-JavaScript&quot;&gt;&lt;a href=&quot;#第一章-html-amp-CSS-amp-JavaScript&quot; class=&quot;headerlink&quot; title=&quot;第一章</summary>
+        
+      
+    
+    
+    
+    
+    <category term="html" scheme="https://zhitenghao.github.io/tags/html/"/>
+    
+    <category term="css" scheme="https://zhitenghao.github.io/tags/css/"/>
+    
+    <category term="JavaScript" scheme="https://zhitenghao.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>STL标准库和泛型编程</title>
     <link href="https://zhitenghao.github.io/2022/050931850.html"/>
     <id>https://zhitenghao.github.io/2022/050931850.html</id>
     <published>2022-05-09T12:55:31.000Z</published>
-    <updated>2022-05-09T14:49:43.845Z</updated>
+    <updated>2022-05-12T03:06:58.629Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;教师：侯捷老师&lt;/p&gt;
-&lt;h2 id=&quot;第一章-STL标准库与泛型编程&quot;&gt;&lt;a href=&quot;#第一章-STL标准库与泛型编程&quot; class=&quot;headerlink&quot; title=&quot;第一章 STL标准库与泛型编程&quot;&gt;&lt;/a&gt;第一章</summary>
+    <summary type="html">&lt;h2 id=&quot;第一章-STL标准库与泛型编程&quot;&gt;&lt;a href=&quot;#第一章-STL标准库与泛型编程&quot; class=&quot;headerlink&quot; title=&quot;第一章 STL标准库与泛型编程&quot;&gt;&lt;/a&gt;第一章</summary>
         
       
     
@@ -49,15 +92,14 @@
     <link href="https://zhitenghao.github.io/2022/050531891.html"/>
     <id>https://zhitenghao.github.io/2022/050531891.html</id>
     <published>2022-05-05T12:34:56.000Z</published>
-    <updated>2022-05-08T10:12:00.479Z</updated>
+    <updated>2022-05-11T07:24:10.336Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;C-第一阶段&quot;&gt;&lt;a href=&quot;#C-第一阶段&quot; class=&quot;headerlink&quot; title=&quot;C++第一阶段&quot;&gt;&lt;/a&gt;C++第一阶段&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;C-第一阶段&quot;&gt;&lt;a href=&quot;#C-第一阶段&quot; class=&quot;headerlink&quot; title=&quot;C++第一阶段&quot;&gt;&lt;/a&gt;C++第一阶段&lt;/h1&gt;&lt;h2 id=&quot;第一章-导学&quot;&gt;&lt;a href=&quot;#第一章-导学&quot; class=&quot;headerlink&quot;</summary>
         
       
     

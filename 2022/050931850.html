@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>STL标准库和泛型编程 | perfect</title>
+    <title>STL标准库和泛型编程 | Perfect&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.1"><link rel="alternate" href="/atom.xml" title="perfect" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.1"><link rel="alternate" href="/atom.xml" title="Perfect's Blog" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">perfect</span>
+                    <span class="logo-span">Perfect&#39;s Blog</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">perfect</div>
+        <div class="logo-name">Perfect&#39;s Blog</div>
         <div class="logo-desc">
             
             记录生活,分享爱
@@ -470,14 +470,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    512
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    1 分
                 </div>
                 
 
@@ -497,8 +497,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>教师：侯捷老师</p>
-<h2 id="第一章-STL标准库与泛型编程"><a href="#第一章-STL标准库与泛型编程" class="headerlink" title="第一章 STL标准库与泛型编程"></a>第一章 STL标准库与泛型编程</h2><ol>
+                <h2 id="第一章-STL标准库与泛型编程"><a href="#第一章-STL标准库与泛型编程" class="headerlink" title="第一章 STL标准库与泛型编程"></a>第一章 STL标准库与泛型编程</h2><ol>
 <li>STL和泛型（Standard Template Library and Generic Programming）</li>
 <li>所谓泛型就是使用模板为主要工具来编写程序。</li>
 <li>本章根据源码分析C++的STL之体系结构，而STL正式泛型编程的最成功的作品，所以本课程事实上就是以STL为标的深层次探讨泛型编程</li>
@@ -520,39 +519,39 @@
 <li>将   ==容器.end()== 进行解引用并不会得到容器的最后一个元素，这是一个危险动作，并不知道解引用以后会得到什么，产生什么后果</li>
 </ol>
 <p>代码实例：</p>
-<pre><code>#include &lt;iostream&gt;
-#include &quot;vector&quot;
-#include &quot;functional&quot;
-#include &quot;algorithm&quot;
+<pre class=" language-c++"><code class="language-c++">#include <iostream>
+#include "vector"
+#include "functional"
+#include "algorithm"
 using namespace std;
 
 void test01()&#123;
-    cout&lt;&lt;&quot;hello STL&quot;&lt;&lt;endl;
+    cout<<"hello STL"<<endl;
     int arr[6] = &#123;1, 2, 4, 2, 4, 5&#125;;
-    vector&lt;int, allocator&lt;int&gt;&gt; v1(arr, arr+6);
-    cout&lt;&lt;count_if(v1.begin(), v1.end(), not1(bind2nd(less&lt;int&gt;(), 4))); // 大于等于4
-    // count_if-&gt;algorithm
-    // less -&gt; functional
-    // bind2nd -&gt; functional
-    // not1 -&gt; functional
+    vector<int, allocator<int>> v1(arr, arr+6);
+    cout<<count_if(v1.begin(), v1.end(), not1(bind2nd(less<int>(), 4))); // 大于等于4
+    // count_if->algorithm
+    // less -> functional
+    // bind2nd -> functional
+    // not1 -> functional
 &#125;
 
 void test02()&#123;
     // 增强for循环的使用
-    vector&lt;int&gt; v;
+    vector<int> v;
     for (int i: &#123;1, 2, 3, 4, 5, 6&#125;) &#123;
         v.push_back(i);
     &#125;
 
-    cout&lt;&lt;&quot;===================&quot;&lt;&lt;endl;
+    cout<<"==================="<<endl;
 
-    for (auto&amp; elem : v) &#123;
+    for (auto& elem : v) &#123;
         elem*=3; // elem 就是引用,这会修改容器中的数据
-        cout&lt;&lt;elem&lt;&lt;endl;
+        cout<<elem<<endl;
     &#125;
 
     for (auto elem : v) &#123; // auto 会自动推断数据类型
-        cout &lt;&lt; elem &lt;&lt; endl;
+        cout << elem << endl;
     &#125;
 &#125;
 
@@ -563,43 +562,32 @@ int main() &#123;
 &#125;
 </code></pre>
 <h3 id="1-2-容器的分类及测试"><a href="#1-2-容器的分类及测试" class="headerlink" title="1.2 容器的分类及测试"></a>1.2 容器的分类及测试</h3><ol>
-<li><p>可以参考C++初级部分的STL相关知识</p>
-</li>
-<li><p>序列式容器：Array、Vector、Deque、List（双向列表）、Forward_List（单向列表）</p>
-</li>
-<li><p>关联式容器：键值对，有key、value，适合做快速的查找，set/multiset、map/multimap，底层是红黑树，会自动排序</p>
-</li>
-<li><p>无序容器：unordered_set，unordered_multiset、unordered_map，unordered_multimap，底层是哈希表</p>
-</li>
-<li><p>容器之间的数据结构是不一样的</p>
-</li>
-<li><p>Array是在C++11引入的，是一个连续的内存空间，无法扩容</p>
-</li>
-<li><p>Vector可以自动扩容，扩容动作由分配器做，只可以从尾部加入数据</p>
-</li>
-<li><p>Deque可以在头和尾增加数据</p>
-</li>
-<li><p>List，链表，不是连续的内存空间，数据之间由指针连接，底层代码是双向环形列表</p>
-</li>
-<li><p>Forward_List 单向列表</p>
-</li>
-<li><p>Set/Multiset，内部使用红黑树做的，它的key和value是不分的，multiset的key是可以重复的</p>
-</li>
-<li><p>Map/Multimap，内部使用红黑树做的，高度平衡二叉树（高度会调整到左右高度几乎相同），这提高了查找效率，multimap的key是可以重复的</p>
-</li>
-<li><p>哈希表：数据要根据某个计算放到某个位置，但会发生数据冲突，但是可以解决冲突，解决方式可以采用如下图所示的方式，这个方式是最被推荐的，但是这可能会导致查找数据变慢，因此链表不可以太长，这也是有机制来解决的</p>
-</li>
-<li><p><img src="/images/STL%E6%A0%87%E5%87%86%E5%BA%93%E5%92%8C%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/%E5%AE%B9%E5%99%A8%E5%88%86%E7%B1%BB%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.png" alt="容器分类及数据结构"></p>
-</li>
+<li>可以参考C++初级部分的STL相关知识</li>
+<li>序列式容器：Array、Vector、Deque、List（双向列表）、Forward_List（单向列表）</li>
+<li>关联式容器：键值对，有key、value，适合做快速的查找，set/multiset、map/multimap，底层是红黑树，会自动排序</li>
+<li>无序容器：unordered_set，unordered_multiset、unordered_map，unordered_multimap，底层是哈希表</li>
+<li>容器之间的数据结构是不一样的</li>
+<li>Array是在C++11引入的，是一个连续的内存空间，无法扩容</li>
+<li>Vector可以自动扩容，扩容动作由分配器做，只可以从尾部加入数据</li>
+<li>Deque可以在头和尾增加数据</li>
+<li>List，链表，不是连续的内存空间，数据之间由指针连接，底层代码是双向环形列表</li>
+<li>Forward_List 单向列表</li>
+<li>Set/Multiset，内部使用红黑树做的，它的key和value是不分的，multiset的key是可以重复的</li>
+<li>Map/Multimap，内部使用红黑树做的，高度平衡二叉树（高度会调整到左右高度几乎相同），这提高了查找效率，multimap的key是可以重复的</li>
+<li>哈希表：数据要根据某个计算放到某个位置，但会发生数据冲突，但是可以解决冲突，解决方式可以采用如下图所示的方式，这个方式是最被推荐的，但是这可能会导致查找数据变慢，因此链表不可以太长，这也是有机制来解决的</li>
 </ol>
-<h4 id="1-2-1-容器-array"><a href="#1-2-1-容器-array" class="headerlink" title="1.2.1 容器 array"></a>1.2.1 容器 array</h4><pre><code>array容器.size();  // 容器数据个数
+<h4 id="1-2-1-容器-array"><a href="#1-2-1-容器-array" class="headerlink" title="1.2.1 容器 array"></a>1.2.1 容器 array</h4><pre class=" language-c++"><code class="language-c++">array容器.size();  // 容器数据个数
 array容器.front(); // 容器的第一个元素
 array容器.back(); // 容器的最后一个元素
 array容器.data(); // 容器的首地址
 </code></pre>
-<pre><code>qsort(参数列表); // 排序
+<pre class=" language-c++"><code class="language-c++">qsort(参数列表); // 排序
 </code></pre>
-<h4 id="1-2-2-容器-vector"><a href="#1-2-2-容器-vector" class="headerlink" title="1.2.2 容器 vector"></a>1.2.2 容器 vector</h4><pre><code>vector // 只能从尾部插入数据
+<p>注意：</p>
+<ol>
+<li>array是一个连续空间，它的迭代器就可以用单纯的指针来实现，不需要使用类来实现该容器的迭代器</li>
+</ol>
+<h4 id="1-2-2-容器-vector"><a href="#1-2-2-容器-vector" class="headerlink" title="1.2.2 容器 vector"></a>1.2.2 容器 vector</h4><pre class=" language-c++"><code class="language-c++">vector // 只能从尾部插入数据
 vector 是一段连续的内存空间，它的扩容是成倍的扩容，两倍两倍的空间增长，这可能带来内存浪费的问题
 vector容器.size(); // 真正的元素的个数
 vector容器.front(); // 返回头元素
@@ -607,7 +595,17 @@ vector容器.back(); // 返回尾元素
 vector容器.data(); // 该容器的首地址
 vector容器.capacity(); // 该容器的容量
 </code></pre>
-<h4 id="1-2-3-容器-list"><a href="#1-2-3-容器-list" class="headerlink" title="1.2.3 容器 list"></a>1.2.3 容器 list</h4><pre><code>list容器是双向列表，只要内存有空余，就可以放数据
+<p><strong>注意：</strong></p>
+<ol>
+<li>默认的分配器是G2.9的alloc</li>
+<li>vector可以使用中括号存取数据</li>
+</ol>
+<p><strong>注意：</strong></p>
+<ol>
+<li>vector容器的大小若不初始化，则开始的size()是0</li>
+<li>每次调整容器的大小，就涉及数据的拷贝，大量调用数据的拷贝构造函数和析构函数</li>
+</ol>
+<h4 id="1-2-3-容器-list"><a href="#1-2-3-容器-list" class="headerlink" title="1.2.3 容器 list"></a>1.2.3 容器 list</h4><pre class=" language-c++"><code class="language-c++">list容器是双向列表，只要内存有空余，就可以放数据
 list.size(); // 该容器元素的个数
 list.max_size(); // 该容器可以存放多少个数字
 list.front(); // 该容器的头元素
@@ -615,22 +613,50 @@ list.back(); // 该容器的尾元素
 list.sort(); // 该容器自带的sort()，不需要形参;特别注意标准库也有一个sort(); 
 // 当容器有自带的sort()的时候，要用自带的函数，其他容器也一样
 </code></pre>
-<h4 id="1-2-4-容器-forward-list"><a href="#1-2-4-容器-forward-list" class="headerlink" title="1.2.4 容器 forward_list"></a>1.2.4 容器 forward_list</h4><pre><code>forward_list 也只能在尾部插入元素
+<p><strong>图解：</strong></p>
+<ol>
+<li><p>G2.9版本的 list的默认的分配器是alloc，list的每个结点有 数据域 和 前指针域 和 后指针域</p>
+</li>
+<li><p>G2.9版本的list类就是一个类，而在G4.9版本list有多个类继承实习</p>
+</li>
+</ol>
+<p><strong>图解：</strong></p>
+<ol>
+<li>为了区分自增的前缀和后缀的调用，使用了operator++(int)（后缀） 和 operator++()（前缀），自减类似</li>
+</ol>
+<h4 id="1-2-4-容器-forward-list"><a href="#1-2-4-容器-forward-list" class="headerlink" title="1.2.4 容器 forward_list"></a>1.2.4 容器 forward_list</h4><pre class=" language-c++"><code class="language-c++">forward_list 也只能在尾部插入元素
 forward_list容器.max_size(); 
 forward_list容器.front();
 forward_list容器.sort(); // 不需要形参
 // 该容器没有size(),没有back();
 </code></pre>
-<h4 id="1-2-5-容器-slit"><a href="#1-2-5-容器-slit" class="headerlink" title="1.2.5 容器 slit"></a>1.2.5 容器 slit</h4><pre><code>跟forward_list类似，该容器是非标准库的，所以需要包含头文件：#include&lt;ext\slist&gt;
+<h4 id="1-2-5-容器-slit"><a href="#1-2-5-容器-slit" class="headerlink" title="1.2.5 容器 slit"></a>1.2.5 容器 slit</h4><pre class=" language-c++"><code class="language-c++">跟forward_list类似，该容器是非标准库的，所以需要包含头文件：#include<ext\slist>
 </code></pre>
-<h4 id="1-2-6-容器-Deque"><a href="#1-2-6-容器-Deque" class="headerlink" title="1.2.6 容器 Deque"></a>1.2.6 容器 Deque</h4><pre><code>Deuqe; // 可以在两端插入删除数据，其数据结构可以参考C++初级
+<h4 id="1-2-6-容器-Deque"><a href="#1-2-6-容器-Deque" class="headerlink" title="1.2.6 容器 Deque"></a>1.2.6 容器 Deque</h4><pre class=" language-c++"><code class="language-c++">Deuqe; // 可以在两端插入删除数据，其数据结构可以参考C++初级
 // 其数据结构：map 和 buffer, 在每一个buffer在内存中是连续的
 deque容器.size(); // 返回该容器元素个数
 deque容器.front(); // 返回头部元素
 deque容器.back(); // 返回尾部元素
 deque容器.max_size(); // 
 </code></pre>
-<h4 id="1-2-7-stack"><a href="#1-2-7-stack" class="headerlink" title="1.2.7 stack"></a>1.2.7 stack</h4><pre><code>stack; // 栈，先进后出
+<p>注意：</p>
+<ol>
+<li>iterator的first是buffer的开头，last是buffer的末尾</li>
+<li>iterator的cur指向了该迭代器指向的数据</li>
+<li>iterator的node指向了该数据的buffer在map中的位置</li>
+</ol>
+<p><strong>注意：</strong></p>
+<p>在insert元素的时候，会发生元素的移动，但是deque可以判断从哪一段插入元素移动的其他元素更好</p>
+<p><strong>注意：</strong></p>
+<ol>
+<li>迭代器一定对运算符进行了重载</li>
+<li>deque可以一次移动多个位置</li>
+</ol>
+<p>注意：</p>
+<ol>
+<li>在扩充数据的时候，原来的map复制到新的map时，将原来的map复制到新的map的中间，以便可以左右增加buffer</li>
+</ol>
+<h4 id="1-2-7-stack"><a href="#1-2-7-stack" class="headerlink" title="1.2.7 stack"></a>1.2.7 stack</h4><pre class=" language-c++"><code class="language-c++">stack; // 栈，先进后出
 该容器的底层是用deque实现的
 stack容器.push(); // 栈顶加入元素
 stack容器.size();
@@ -638,7 +664,11 @@ stack容器.top(); // 返回栈顶元素的值
 stack容器.pop(); // 栈顶元素出栈
 // 不提供迭代器的某些功能
 </code></pre>
-<h4 id="1-2-8-queue"><a href="#1-2-8-queue" class="headerlink" title="1.2.8 queue"></a>1.2.8 queue</h4><pre><code>queue; // 队列，先进先出
+<p>注意：</p>
+<ol>
+<li>stack和queue内涵了deque，只是没有deque的某些功能</li>
+</ol>
+<h4 id="1-2-8-queue"><a href="#1-2-8-queue" class="headerlink" title="1.2.8 queue"></a>1.2.8 queue</h4><pre class=" language-c++"><code class="language-c++">queue; // 队列，先进先出
 queue容器.push(); // 队尾加入元素
 queue容器.pop(); // 队头元素出队
 queue容器.size();
@@ -646,22 +676,39 @@ queue容器.front(); // 返回队头元素的值
 queue容器.back(); // 返回队尾元素的值
 // 不提供迭代器的某些功能
 </code></pre>
-<h4 id="1-2-9-容器-set-multiset"><a href="#1-2-9-容器-set-multiset" class="headerlink" title="1.2.9 容器 set / multiset"></a>1.2.9 容器 set / multiset</h4><pre><code>set 和 multiset 的区别就是 set 里面的数据不可以重复，multiset 里面的数据可以重复
-其数据结构是红黑树
+<p><strong>注意：</strong></p>
+<ol>
+<li>stack和queue内涵了deque，只是没有deque的某些功能</li>
+</ol>
+<h4 id="1-2-9-容器-set-multiset"><a href="#1-2-9-容器-set-multiset" class="headerlink" title="1.2.9 容器 set / multiset"></a>1.2.9 容器 set / multiset</h4><pre class=" language-c++"><code class="language-c++">// set 和 multiset 的区别就是 set 里面的数据不可以重复，multiset 里面的数据可以重复
+// 其数据结构是红黑树，因此有元素自动排序的特性，排序依据是key，但是set / multiset元素的value和key合一，value就是key
 set/multiset容器.insert(); // 插入数据，放在合适位置，该容器的数据都是有序的
 set/multiset容器.size();
 set/multiset容器.max_size();
 set/multiset容器.find(elem); // 该容器本身就有一个find()函数，但是还有find(形参列表)全局函数，首选自带的函数
 </code></pre>
-<h4 id="1-2-10-容器-map-multimap"><a href="#1-2-10-容器-map-multimap" class="headerlink" title="1.2.10 容器 map / multimap"></a>1.2.10 容器 map / multimap</h4><pre><code>map/multimap&lt;key, value&gt;容器.insert( pair&lt;keyType, valueType&gt;(key, value) );
-map/multimap&lt;key, value&gt;容器底层也是红黑树
-map/multimap&lt;key, value&gt;容器.size();
-map/multimap&lt;key, value&gt;容器.max_size();
-map/multimap&lt;key, value&gt;容器.find(elem); // 同上
+<ol>
+<li>我们无法使用set / multiset的迭代器改变元素值（因为value就是key，key有其严格排序的规则），set / multiset的迭代器底部的br_tree的const-iterator，就是为了防止程序员对元素赋值</li>
+<li>set的insert() -&gt;rb_tree的insert_unique(),底层的迭代器是const_iterator,不允许修改数据</li>
+<li>multiset的insert() -&gt;rb_tree的insert_equal()</li>
+</ol>
+<h4 id="1-2-10-容器-map-multimap"><a href="#1-2-10-容器-map-multimap" class="headerlink" title="1.2.10 容器 map / multimap"></a>1.2.10 容器 map / multimap</h4><ol>
+<li>map / multimap 以rb_tree为底层结构，因此有元素自动排序的特性，排序的依据是key</li>
+<li>无法使用 map / multimap 迭代器来改变key，因为key有严格的排列规则，但可以使用它来改变元素的data，因此，map / multimap内部自动将程序员指定的keytype设置为const，如此便可以禁止程序员对元素的key修改</li>
+<li>map的insert() -&gt;rb_tree的insert_unique()</li>
+<li>multimap的insert() -&gt;rb_tree的insert_equal()</li>
+<li>map的迭代器就是rb_tree的迭代器（此迭代器是可以修改数据的），但是 map 底层的pair&lt;const Key，T&gt;，map自动把Key设置为const，这就使得key不可以修改</li>
+<li>map可以通过中括号 [ ] 存取数据，中括号中是key，修改的是key指向的值。map容器 [ keyIndex ] = value; 若key不存在，则就会创建一个key</li>
+</ol>
+<pre class=" language-c++"><code class="language-c++">map/multimap<key, value>容器.insert( pair<keyType, valueType>(key, value) );
+map/multimap<key, value>容器底层也是红黑树
+map/multimap<key, value>容器.size();
+map/multimap<key, value>容器.max_size();
+map/multimap<key, value>容器.find(elem); // 同上
 // 该容器的迭代器.first 是key的值
 // 该容器的迭代器.second 是value的值
 </code></pre>
-<h4 id="1-2-11-容器-unordered-set-和-unordered-multiset"><a href="#1-2-11-容器-unordered-set-和-unordered-multiset" class="headerlink" title="1.2.11 容器 unordered_ set 和 unordered_ multiset"></a>1.2.11 容器 unordered_ set 和 unordered_ multiset</h4><pre><code>unordered_ set; // 该容器底层是哈希表
+<h4 id="1-2-11-容器-unordered-set-和-unordered-multiset"><a href="#1-2-11-容器-unordered-set-和-unordered-multiset" class="headerlink" title="1.2.11 容器 unordered_ set 和 unordered_ multiset"></a>1.2.11 容器 unordered_ set 和 unordered_ multiset</h4><pre class=" language-c++"><code class="language-c++">unordered_ set; // 该容器底层是哈希表
 unordered_ set容器.insert(elem);
 unordered_ set容器.size();
 unordered_ set容器.max_size();
@@ -674,7 +721,7 @@ unordered_ set容器.bucket_size(i); // 第 i 个篮子中有多少个数据
 unordered_ set容器.find(elem);
 // set的数据不可以重复，multiset数据不可以重复
 </code></pre>
-<h4 id="1-2-12-容器-unordered-map-和-unordered-multimap"><a href="#1-2-12-容器-unordered-map-和-unordered-multimap" class="headerlink" title="1.2.12 容器 unordered_ map 和 unordered_ multimap"></a>1.2.12 容器 unordered_ map 和 unordered_ multimap</h4><pre><code>unordered_ map容器.size();
+<h4 id="1-2-12-容器-unordered-map-和-unordered-multimap"><a href="#1-2-12-容器-unordered-map-和-unordered-multimap" class="headerlink" title="1.2.12 容器 unordered_ map 和 unordered_ multimap"></a>1.2.12 容器 unordered_ map 和 unordered_ multimap</h4><pre class=" language-c++"><code class="language-c++">unordered_ map容器.size();
 unordered_ map容器.max_size();
 unordered_ map容器.insert();
 // 该容器底层是哈希表
@@ -682,13 +729,152 @@ unordered_ map容器.insert();
 // map 容器可以使用中括号运算符[]，可以用于访问和插入数据
 map容器[index] = value; // index就是key,value就是容器的key对应的value
 </code></pre>
+<h4 id="1-2-13-rb-tree-深度探索"><a href="#1-2-13-rb-tree-深度探索" class="headerlink" title="1.2.13 rb_tree 深度探索"></a>1.2.13 rb_tree 深度探索</h4><ol>
+<li>使用者把元素插入rb_tree，会被插入合适的位置，且是有序的</li>
+<li>insert_unique() -&gt; map / set</li>
+<li>insert_equal() -&gt; multimap / multiset</li>
+<li>函数中没有数据成员，则实际占用的内存大小为1，理论为0</li>
+<li>OOP编程：句柄 and body</li>
+</ol>
+<h4 id="1-2-14-容器hashtable"><a href="#1-2-14-容器hashtable" class="headerlink" title="1.2.14 容器hashtable"></a>1.2.14 容器hashtable</h4><ol>
+<li>元素经过某种计算落在相同的位置，这就会导致冲突，比如 数据编号 % 哈希表的长度 = 该元素在哈希表的位置，当然还有别的寻找存放位置的方法，但是依旧要解决数据的冲突的 </li>
+<li>解决冲突也有很多方式，其中一种方式就是将冲突的所有数据链接起来，形成链表</li>
+<li>若因为冲突而链表过长，这个查找数据的开销就会增大，因此会限制链表的长度。若目前元素的个数大于篮子的个数，那么篮子的个数就会增加两倍（但在不同的C++库中，增加的不一定是两倍，可能是两倍附近的质数，也可能是别的方式），再将原来的数据打散，并重新放到新的篮子里，这样就把链表的长度变短了，这样就提高了时间效率</li>
+<li>HashFun 算出来的编号叫做hashCode，使得元素经过hashCode映射之后能够被设置到hashTable的某个位置，大家公认的做法是，hashCode % 篮子长度  = 元素的位置</li>
+<li>hashTable的篮子类型为vector</li>
+<li>hashTable的每一个结点有指针域和数据域</li>
+<li>迭代器是指向结点的，那么要指向某条链表的最后一个数据之后，还要指向下一个元素，在底层，该迭代器中有该hashTable的指针，因此容易找到下一个篮子</li>
+</ol>
+<p><strong>注意：</strong></p>
+<ol>
+<li>读源码的重要性之一就是在编程的时候利用底层源码</li>
+<li>const char*：这是c风格的字符串</li>
+</ol>
 <h3 id="1-3-分配器allocator"><a href="#1-3-分配器allocator" class="headerlink" title="1.3 分配器allocator"></a>1.3 分配器allocator</h3><ol>
 <li>容器都有默认的分配器，分配内存就要用到对应的分配器。</li>
 <li>不建议直接使用分配器</li>
 <li>容器类型&lt;elemType, 分配器<elemType>&gt;  容器名；</elemType></li>
 </ol>
+<h2 id="第二章-STL-内核"><a href="#第二章-STL-内核" class="headerlink" title="第二章 STL 内核"></a>第二章 STL 内核</h2><h3 id="2-1-OOP-面向对象编程-VS-GP-泛型编程"><a href="#2-1-OOP-面向对象编程-VS-GP-泛型编程" class="headerlink" title="2.1 OOP(面向对象编程) VS GP(泛型编程)"></a>2.1 OOP(面向对象编程) VS GP(泛型编程)</h3><ol>
+<li>OOP（面向对象编程）：欲将数据和方法封装在一个类中</li>
+<li>GP（泛型编程）：欲将数据和方法分开</li>
+<li>采用CP（泛型编程）：Containers和Algorithm团队可以各自完成自己的工作，两个团队通过Iterator迭代器沟通即可</li>
+<li>Algorithm 通过 Iterator 确定操作范围，并通过 Iterator 取用 Container 元素</li>
+<li>仿函数可以对Algorithm中的算法作为一种补充</li>
+<li>随机访问迭代器（random accessive iterator），可以进行加减等其他运算</li>
+<li>全局的algorithm中的算法，有些容器是不可以使用，因为这些容器并不满足调用全局函数调用的条件。</li>
+<li>所有algorithm，其内最终涉及元素本身的操作，无非就是比大小</li>
+</ol>
+<h3 id="2-2-模板"><a href="#2-2-模板" class="headerlink" title="2.2 模板"></a>2.2 模板</h3><ol>
+<li><p>类模板</p>
+<pre class=" language-c++"><code class="language-c++">tempalte<typename T>
+</code></pre>
+</li>
+<li><p>函数模板</p>
+<pre class=" language-c++"><code class="language-c++">template<typename T>
+编译器会做实参推导，因此在用函数模板时，传入的实参不需要指定类
+</code></pre>
+</li>
+<li><p>成员模板</p>
+</li>
+</ol>
+<h4 id="2-2-1-泛化"><a href="#2-2-1-泛化" class="headerlink" title="2.2.1 泛化"></a>2.2.1 泛化</h4><ol>
+<li><p>在设计类模板时，会泛化设计</p>
+</li>
+<li><p>可以对于特定的情况特化设计</p>
+</li>
+<li><p>语法形式：</p>
+<pre class=" language-c++"><code class="language-c++">// 泛化
+tempalte<class type>
+struct _type_traits&#123;
+    // 数据声明
+    typedef _false_type has_trival;
+&#125;;
+
+// 特化
+tempalte<> struct _type_traits<int>&#123;
+    // 数据声明
+    typedef _false_type has_trival;
+&#125;;
+
+// 特化
+tempalte<> struct _type_traits<double>&#123;
+    // 数据声明
+    typedef _false_type has_trival;
+&#125;;
+
+_type_traits<Foo>::has_trival;  //调用泛化的结构
+</code></pre>
+<pre class=" language-c++"><code class="language-c++">temlate<class Key> struct hash&#123;&#125;;  // 泛化
+_STL_TEMPLATE_NULL struct hash<char>&#123;&#125;; // 特化，前面省略了tempalte<>
+_STL_TEMPLATE_NULL struct hash<short>&#123;&#125;; // 特化，前面省略了tempalte<>
+_STL_TEMPLATE_NULL struct hash<unsigned short>&#123;&#125;; // 特化，前面省略了tempalte<>
+_STL_TEMPLATE_NULL struct hash<int>&#123;&#125;; // 特化，前面省略了tempalte<>
+</code></pre>
+</li>
+</ol>
+<h4 id="2-2-2-偏特化"><a href="#2-2-2-偏特化" class="headerlink" title="2.2.2 偏特化"></a>2.2.2 偏特化</h4><ol>
+<li><p>泛化</p>
+<pre class=" language-c++"><code class="language-c++">tempalte<class T, class Alloc = alloc>
+class vector&#123;
+    ...
+&#125;;
+</code></pre>
+</li>
+<li><p>偏特化：局部特化</p>
+<pre class=" language-c++"><code class="language-c++">tempalte<class Alloc>
+class vector<bool, Alloc>&#123;
+    ...
+&#125;;
+
+// T类型的指针
+tempalte<class T>
+struct iterator_traits<T*>&#123;
+    ...
+&#125;;
+</code></pre>
+</li>
+</ol>
+<h3 id="2-3-分配器-allocators"><a href="#2-3-分配器-allocators" class="headerlink" title="2.3 分配器 allocators"></a>2.3 分配器 allocators</h3><ol>
+<li>学这部分内容是为了选择合适的容器应用到场景中，而不是去写分配器</li>
+</ol>
+<h4 id="2-3-1-operator-new-和-malloc"><a href="#2-3-1-operator-new-和-malloc" class="headerlink" title="2.3.1 operator new() 和 malloc()"></a>2.3.1 operator new() 和 malloc()</h4><pre class=" language-c++"><code class="language-c++">void* operator new(参数列表)&#123;
+    ...
+    malloc(); // 分配内存
+    ...
+&#125;
+</code></pre>
+<p><strong>注意：</strong></p>
+<ol>
+<li>在用malloc()函数分配内存的时候，不仅分配了size()大小的内存快，还有头和尾的内存（cookie，这是额外空间开销，这些额外的空间开销记录了分配数据的内存的信息，以便使用和释放等），size是实际数据的内存块</li>
+<li>G2.9标准库的allocator的实现解决了上述的空间浪费的问题，省去了每个数据的cookie，但是底层还是用malloc得到内存的，底层是哈希表，G2.9标准库对于分配器的实现是最好的方式</li>
+<li>G4.9版的标准库对于allocator的实现却又回到了上图的那种方式，每个数据都会有cookie，存在资源浪费的可能，但是G4.9版的标准库还是有G2.9版的对于allocate的实现的，只不过是extension allocators</li>
+</ol>
+<h4 id="2-3-2-STL对allocator的使用"><a href="#2-3-2-STL对allocator的使用" class="headerlink" title="2.3.2 STL对allocator的使用"></a>2.3.2 STL对allocator的使用</h4><ol>
+<li>deallocate,回收内存operator delete()调用的是c语言的free()，free()对应的是malloc()</li>
+<li>allocatorte也是一个类，这个类有allocate() 函数 和 deallocate() 函数</li>
+<li>allocate函数下面有operator new()函数，而 operator new()函数也是通过malloc()函数分配内存的，malloc()函数分配内存后需要用free()释放</li>
+<li>deallocate()函数要调用operator delete()函数，operator delete()函数下面调用了free()函数来释放内存</li>
+</ol>
+<h3 id="2-4-容器之间的实现关系与分类"><a href="#2-4-容器之间的实现关系与分类" class="headerlink" title="2.4 容器之间的实现关系与分类"></a>2.4 容器之间的实现关系与分类</h3><ol>
+<li>rb_tree 红黑树，平衡二叉树</li>
+</ol>
+<p><strong>图解：</strong></p>
+<ol>
+<li>容器对象的sizeof() 大小是指该对象的指针的大小，而不是存放了多少个数据占的内存的大小</li>
+</ol>
+<h3 id="2-5-迭代器的设计原则和iterator-Traits的作用与设计"><a href="#2-5-迭代器的设计原则和iterator-Traits的作用与设计" class="headerlink" title="2.5 迭代器的设计原则和iterator Traits的作用与设计"></a>2.5 迭代器的设计原则和iterator Traits的作用与设计</h3><h4 id="2-5-1-iterator需要遵循的原则"><a href="#2-5-1-iterator需要遵循的原则" class="headerlink" title="2.5.1 iterator需要遵循的原则"></a>2.5.1 iterator需要遵循的原则</h4><p>迭代器是容器和算法之间的桥梁</p>
+<h2 id="第三章-算法"><a href="#第三章-算法" class="headerlink" title="第三章 算法"></a>第三章 算法</h2><ol>
+<li>从语言层面上讲，算法是一个函数模板</li>
+<li>algorithm看不见containers，对其一无所知，所以，它需要的一切信息必须从iterator取得，而iterator由containers提供，必须能够回答algorithm的所有提问，才能搭配该algorithm的所有操作</li>
+<li>array容器、vector容器、deque容器的迭代器都是random_access_iterator_tag（随机访问迭代器）</li>
+<li>list、set、multiset、map、multimap迭代器是bidirectional_iterator_tag（双向迭代器）</li>
+<li>forward_list的迭代器是forwar_iterator_tag</li>
+<li>unordered set、unordered multiset、unordered map、unordered multimap 要看底层的链表是单向链表还是双向链表，才能决定采用的迭代器种类</li>
+</ol>
 <h2 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h2><p>std::bad_alloc  内存分配异常</p>
 <p>abort()；退出程序</p>
+<p>#include<typeinfo>的typeid，</typeinfo></p>
 
                 
             </div>
@@ -928,18 +1114,17 @@ map容器[index] = value; // index就是key,value就是容器的key对应的valu
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/050931850.html">
+                <a href="/2022/051348395.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="STL标准库和泛型编程">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="前端基础">
                         
-                        <span class="card-title">STL标准库和泛型编程</span>
+                        <span class="card-title">前端基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -949,31 +1134,30 @@ map容器[index] = value; // index就是key,value就是容器的key对应的valu
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-09
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-13
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/C/" class="post-category">
-                                    C++
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ztHao
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C-%E8%BF%9B%E9%98%B6/">
-                        <span class="chip bg-color">C++进阶</span>
+                    <a href="/tags/html/">
+                        <span class="chip bg-color">html</span>
                     </a>
                     
-                    <a href="/tags/STL%E6%A0%87%E5%87%86%E5%BA%93%E5%92%8C%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/">
-                        <span class="chip bg-color">STL标准库和泛型编程</span>
+                    <a href="/tags/css/">
+                        <span class="chip bg-color">css</span>
+                    </a>
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
@@ -1225,7 +1409,7 @@ map容器[index] = value; // index就是key,value就是容器的key对应的valu
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.1k</span>&nbsp;字
+                class="white-color">6.6k</span>&nbsp;字
             
             
             
